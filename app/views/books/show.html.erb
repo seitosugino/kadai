@@ -1,12 +1,11 @@
-<%= flash[:notice] %>
+<p class="notice"><%= flash[:notice] %></p>
 
 <%= form_with model:@book, local:true do |book| %>
 
-<div><strong>Title</strong><%= @book.title %></div>
+<p><strong>Title: </strong><%= @book.title %></p>
 
-<div><strong>Body</strong><%= @book.body %></div>
+<p><strong>Body: </strong><%= @book.body %></p>
 
 <% end %>
 
-<p><%= link_to "Edit", edit_book_path(@book) %><p/>
-<p><%= link_to "Back", books_path %><p/>
+<%= link_to "Edit", edit_book_path(@book) %><span> | </span><%= link_to "Back", books_path %>
