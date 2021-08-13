@@ -36,10 +36,10 @@
 
 <% if @book.errors.any? %>
   <%= @book.errors.count %> errors prohibited this book from being saved:
-  <h2><% @book.errors.full_messages.each do |message| %></h2>
+  <h2><% @book.errors.full_messages.each do |message| %><h2>
     <ul>
       <li><%= message %></li>
-    </ul>  
+    </ul> 
   <% end %>
 <% end %>
 
